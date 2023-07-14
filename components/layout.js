@@ -4,7 +4,6 @@ import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 
-const name = 'izek';
 export const siteTitle = 'palimpsest';
 
 export default function Layout({ children, home }) {
@@ -18,13 +17,13 @@ export default function Layout({ children, home }) {
       <header className={styles.header}>
         {home ? (
           <>
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
+            <h1 className={utilStyles.heading2Xl}>{siteTitle}</h1>
           </>
         ) : (
           <>
             <h2 className={utilStyles.headingLg}>
               <Link href='/' className={utilStyles.colorInherit}>
-                {name}
+                {siteTitle}
               </Link>
             </h2>
           </>
